@@ -17,7 +17,7 @@ function HeroBanner() {
                         Elevate your startup&apos;s success with Interaction User Experience Design (iUXD)
                     </h1>
                 </div>
-                <button className="border border-[#ffffff50] md:max-w-[130px] max-w-[115px] md:h-[64px] h-[56px] rounded-full md:text-base text-sm cursor-none" onClick={() => dispatch(nameOfSliderComponent({ name: "contact" }))} onPointerEnter={() => dispatch(iconShow())} onPointerLeave={() => dispatch(iconHide())}>About</button>
+                <button className="border border-[#ffffff50] md:max-w-[130px] max-w-[115px] md:h-[64px] h-[56px] rounded-full md:text-base text-sm cursor-none z-20" onClick={() => dispatch(nameOfSliderComponent({ name: "contact" }))} onPointerEnter={() => dispatch(iconShow())} onPointerOut={() => dispatch(iconHide())}>About</button>
             </div>
         </main>
     )

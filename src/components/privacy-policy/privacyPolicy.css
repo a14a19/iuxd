@@ -1,0 +1,84 @@
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.forContent,
+.forTable {
+  margin: 30px 0;
+  padding: 20px;
+  max-width: 83%;
+  background-color: white;
+  color: black;
+  font-family: Archivo, sans-serif;
+}
+
+.para {
+  margin-bottom: 20px;
+  color: #616569;
+  text-align: justify;
+  font-family: Archivo, sans-serif;
+}
+
+.forTable {
+  display: grid;
+  gap: 20px;
+}
+
+.numColumn {
+  width: 12%;
+  font-size: 40px;
+}
+
+.titleColumn {
+  width: 30%;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.descColumn {
+  width: 58%;
+  color: #616569;
+  padding: 10px;
+  text-align: justify;
+}
+
+.forTable > div {
+  display: flex;
+}
+
+.forTable > div:first-child {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .mainbox {
+    padding: 0 10px;
+  }
+  .descColumn {
+    width: 100%;
+  }
+  .numColumn {
+    width: 100%;
+  }
+  .titleColumn {
+    width: 100%;
+  }
+}
+
+.blackLine1 {
+  width: 100%;
+  height: 4px;
+  width: 83%;
+  background-color: black;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.tableSeparator {
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+  margin: 20px 0;
+}

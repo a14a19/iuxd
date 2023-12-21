@@ -8,6 +8,10 @@ const cursorSlice = createSlice({
     name: "cursor",
     initialState,
     reducers: {
+        iconShowHide: (state, { payload }) => {
+            state.iconDisplay = !state.iconDisplay;
+            console.log(state.iconDisplay, payload, "hide show")
+        },
         iconShow: (state, { payload }) => {
             state.iconDisplay = true;
             console.log(state.iconDisplay, payload)
@@ -21,6 +25,6 @@ const cursorSlice = createSlice({
 
 console.log("cursorSlice => ", cursorSlice)
 
-export const { iconHide, iconShow } = cursorSlice.actions;
+export const { iconHide, iconShow, iconShowHide } = cursorSlice.actions;
 
 export default cursorSlice.reducer;

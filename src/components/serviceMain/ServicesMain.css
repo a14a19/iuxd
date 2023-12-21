@@ -1,0 +1,74 @@
+.top1 {
+    background-color: black;
+  }
+  
+  .top1 img {
+    width: 100%;
+    margin-top: 144px;
+    margin-left: -101px;
+  }
+  
+  .top2 {
+    display: flex;
+    flex-direction: column; /* Change to column for mobile */
+    margin-top:0px;
+    background-color: black;
+    width: 100%;
+  }
+  
+  .top3 {
+    width: 100%; /* Change to 100% for mobile */
+    background-color: black;
+  }
+  
+  .top3 h2 {
+    margin-left: 20px; /* Adjust for mobile */
+    color: white;
+  }
+  
+  .top4 {
+    width: 100%; /* Change to 100% for mobile */
+    background-color: black;
+  }
+  
+  .top4 h1 {
+    font-size: 35px; /* Adjust for mobile */
+    font-weight: 500;
+    margin-left: 20px; /* Adjust for mobile */
+    color: white;
+  }
+  
+  .top4 p {
+    font-size: 18px; /* Adjust for mobile */
+    margin-left: 20px; /* Adjust for mobile */
+    font-weight: 500;
+    color: gray;
+  }
+  
+  .top4 button {
+    border-radius: 25px; /* Adjust for mobile */
+    margin-left: 20px; /* Adjust for mobile */
+    height: 60px; /* Adjust for mobile */
+    width: 30%; /* Adjust for mobile */
+    font-size: 16px; /* Adjust for mobile */
+    color: white;
+    background-color: black;
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* Desktop styles */
+    .top2 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .top3 {
+      width: 50%;
+    }
+  
+    .top4 {
+      width: 50%;
+    }
+    
+  }
+  

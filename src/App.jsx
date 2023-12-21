@@ -1,30 +1,47 @@
-import HeroBanner from "./components/HeroBanner"
-import Cursor from "./components/sub-components/Cursor";
-import { useState } from 'react';
-import Menu from "./components/Menu"
+import Home from "./pages/Home";
+import { Routes, Route } from 'react-router-dom'
+import PrivacyPolicy from "./components/privacy-policy/privacyPolicy";
+import { useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
 
 // sub-components
+// import Multiple from "./components/sub-components/contact/Contact";
+// import PrivacyPolicy from "./components/privacy-policy/privacyPolicy";
 // import Sample from "./components/sub-components/Clients"
 // import Services from "./components/sub-components/services/services";
 
 function App() {
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [enter, setEnter] = useState(false)
+  const location = useLocation()
+  const currentPath1 = location.pathname.split("/")[1];
+  const currentPath2 = location.pathname.split("/")[2];
 
-  const mouseOver = (e) => {
-    setPosition({ x: e.clientX, y: e.clientY });
-  }
+  useLayoutEffect(() => {
+
+    return () => window.scrollTo({
+      top: 0,
+      opacity: 0,
+      behavior: "smooth",
+    });
+
+  }, [currentPath1, currentPath2])
 
   return (
-    <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => setEnter(true)} onMouseLeave={() => setEnter(false)} style={{ cursor: "none", overflow: "hidden" }}>
-      <Cursor position={position} enter={enter} />
-      <HeroBanner />
-      {/* <Services /> */}
-      {/* <Sample/> */}
-      <Menu />
-    </main>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+    </Routes>
   )
 }
 
 export default App
+
+{/* <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => setEnter(true)} onMouseLeave={() => setEnter(false)} style={{ cursor: "none", overflow: "hidden" }}>
+      <Cursor position={position} enter={enter} />
+      <HeroBanner />
+      <Multiple />
+      <PrivacyPolicy />
+      <Services />
+      <Sample/>
+      <Menu />
+    </main> */}
