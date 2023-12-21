@@ -12,7 +12,7 @@ function Header() {
     const dispatch = useDispatch()
 
     const toggleCursor = useCallback(() => {
-        console.log("test", cursor.cursorEnter)
+        // console.log("test", cursor.cursorEnter)
         dispatch(iconShowHide())
         // cursor.setCursorEnter(({ active }) => active = !active);
 
@@ -21,7 +21,7 @@ function Header() {
     }, []);
 
     const toggleCursorLeave = () => {
-        console.log("test out")
+        // console.log("test out")
         cursor.setCursorEnter(({ active }) => active = !active);
         // dispatch(iconShow())
         // setCursor(({ active }) => ({ active: !active }));
@@ -35,7 +35,7 @@ function Header() {
                     iUXD
                 </h2>
             </div>
-            <button className="md:h-16 h-4 bg-[#121212a5] aspect-square rounded-full cursor-none z-10 flex justify-center items-center" onClick={() => dispatch(nameOfSliderComponent({ name: "contact" }))} onMouseOver={() => dispatch(iconShow())} onMouseLeave={() => dispatch(iconHide())}>
+            <button className="md:h-16 h-12 bg-[#121212a5] aspect-square rounded-full cursor-none z-10 flex justify-center items-center" onClick={() => dispatch(nameOfSliderComponent({ name: "contact" }))} onMouseOver={() => dispatch(iconShow())} onMouseLeave={() => dispatch(iconHide())}>
                 <img src={menuDuo} className="md:h-7 h-5" alt="" />
             </button>
         </header>

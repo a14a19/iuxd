@@ -10,15 +10,15 @@ const cursorSlice = createSlice({
     reducers: {
         iconShowHide: (state, { payload }) => {
             state.iconDisplay = !state.iconDisplay;
-            console.log(state.iconDisplay, payload, "hide show")
+            // console.log(state.iconDisplay, payload, "hide show")
         },
         iconShow: (state, { payload }) => {
             state.iconDisplay = true;
-            console.log(state.iconDisplay, payload)
+            // console.log(state.iconDisplay, payload)
         },
         iconHide: (state, { payload }) => {
             state.iconDisplay = false;
-            console.log(state.iconDisplay, payload)
+            // console.log(state.iconDisplay, payload)
         }
     }
 })

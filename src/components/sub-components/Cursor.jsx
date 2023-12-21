@@ -8,7 +8,7 @@ function Cursor({ position, enter }) {
     const cursor = useContext(cursorContext);
     const { iconDisplay } = useSelector((store) => store.cursor)
 
-    console.log(iconDisplay, "cursor")
+    // console.log(iconDisplay, "cursor")
 
     return (
         <>
