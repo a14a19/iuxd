@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+}
+
+.main-div{
+    background-color: rgb(255, 255, 255);
+    width: 99%;
+    height:1500px;
+    padding: 1%;
+}
+.submain{
+    float: left;
+    width: 50%;
+}
+
+.inner-first{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 10%;
+}
+.inner-second{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.inner-third{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.inner-fourth{
+    padding-left: 30%;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.inner-fifth{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.head{
+    color: #000000;
+    margin-left: 10%;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.head1{
+    color: black;
+    margin-left: 10%;
+}
+
+p{
+    font-size: 18px;
+    color: black;
+    margin-left: 10%;
+    font-weight: 650;
+}
+h2{
+    color: black;
+    margin-left: 60%;
+}
+
+.ininnerdiv{
+    margin-top: 5%;
+    float: left;
+    width: 30%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 12%;
+}
+
+
+.buttn1 {
+    float: right;
+    margin-right: 15%;
+    margin-top: 20%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 25px; /* Use a value larger than half of the button's height/width for a round shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .buttn2 {
+    float: right;
+    margin-right: 15%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 25px; /* Use a value larger than half of the button's height/width for a round shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .buttn:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+
+h3{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 750;
+    margin-left: 12%;
+}
+
+h4{
+    margin-top: 8%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 750;
+    margin-left: 12%;
+
+}
