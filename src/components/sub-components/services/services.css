@@ -1,0 +1,52 @@
+/* Service.css */
+
+/* body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    /* gap: 1rem; */
+}
+
+.service-container {
+    padding: 2rem;
+}
+
+
+.services-section p {
+    margin-top: 2rem;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.heading-content {
+    flex: 1;
+    text: size adjust 50px; 
+}
+
+.footer {
+    margin-top: 1rem;
+    text-align: left;  
+   cursor: auto; 
+}

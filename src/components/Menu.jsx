@@ -2,7 +2,7 @@ import React from 'react'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Menu() {
     const [open, setOpen] = useState(true)
@@ -37,7 +37,7 @@ export default function Menu() {
                         </div>
                         <div className="row1 group flex flex-col gap-8">
                             <div className="divider bg-[#666] h-0.5 w-full group-hover:bg-[#fff]"></div>
-                            <div className="flex flex-row gap-14 md:24 justify-start items-center">
+                            <div className="flex flex-row gap-14 md:gap-24 justify-start items-center">
                                 <div className="number text-2xl">04</div>
                                 <div className="item text-4xl md:text-9xl group-hover:text-[#074aad]">Contact</div>
                             </div>
