@@ -28,7 +28,7 @@ function PrivacyPolicy() {
 
       <div className="forTable mx-4">
         {ppData.map((item, index) => (
-          <React.Fragment key={item.num}>
+          <React.Fragment key={index}>
             <div className="flex mb-4 md:flex-row flex-col">
               <div className="numColumn w-1/5">{item.num}</div>
               <div className="titleColumn w-3/10">{item.title}</div>

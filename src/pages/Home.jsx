@@ -5,11 +5,12 @@ import Menu from '../components/Menu';
 // import CursorContext from '../context/cursor-context';
 import ServicesMain from '../components/serviceMain/ServicesMain';
 import { useDispatch } from 'react-redux';
-import { cursorEnter, handlePosition } from '../features/cursor/cursorSlice';
-import Multiple from '../components/sub-components/contact/Contact';
-import Services from '../components/sub-components/services/services';
-import Sample from '../components/sub-components/Clients';
-import About from '../components/sub-components/about';
+import { cursorEnter, cursorLeave, handlePosition } from '../features/cursor/cursorSlice';
+import SliderComp from '../components/SliderComp';
+// import Multiple from '../components/sub-components/contact/Contact';
+// import Services from '../components/sub-components/services/services';
+// import Sample from '../components/sub-components/Clients';
+// import About from '../components/sub-components/about';
 
 function Home() {
 
@@ -24,14 +25,15 @@ function Home() {
     }
 
     return (
-        <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => dispatch(cursorEnter())} onMouseLeave={() => dispatch(cursorEnter())} style={{ cursor: "none", overflow: "hidden" }}>
+        <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => dispatch(cursorEnter())} onMouseLeave={() => dispatch(cursorLeave())} style={{ cursor: "none", overflow: "hidden" }}>
             <Cursor />
+            <SliderComp />
             <HeroBanner />
             <ServicesMain />
-            <Multiple />
+            {/* <Multiple />
             <Services />
             <About />
-            <Sample />
+            <Sample /> */}
             <Menu />
         </main>
     )
