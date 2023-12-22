@@ -8,7 +8,7 @@ const About = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className='w-full'>
+        <div className='w-full px-6'>
             <div className="header mt-6 p-8">
                 <div className="text-black">About</div>
                 <div onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
