@@ -1,32 +1,38 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Cursor from '../components/sub-components/Cursor';
 import HeroBanner from '../components/HeroBanner';
 import Menu from '../components/Menu';
-import CursorContext from '../context/cursor-context';
+// import CursorContext from '../context/cursor-context';
 import ServicesMain from '../components/serviceMain/ServicesMain';
+import { useDispatch } from 'react-redux';
+import { cursorEnter, handlePosition } from '../features/cursor/cursorSlice';
+import Multiple from '../components/sub-components/contact/Contact';
+import Services from '../components/sub-components/services/services';
+import Sample from '../components/sub-components/Clients';
+import About from '../components/sub-components/about';
 
 function Home() {
 
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [enter, setEnter] = useState(false)
-    const [cursorEnter, setCursorEnter] = useState(false)
+    const dispatch = useDispatch()
+
+    // const [position, setPosition] = useState({ x: 0, y: 0 });
+    // const [enter, setEnter] = useState(false)
 
     const mouseOver = (e) => {
-        setPosition({ x: e.clientX, y: e.clientY });
+        // setPosition({ x: e.clientX, y: e.clientY });
+        dispatch(handlePosition({ x: e.clientX, y: e.clientY }))
     }
 
     return (
-        <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => setEnter(true)} onMouseLeave={() => setEnter(false)} style={{ cursor: "none", overflow: "hidden" }}>
-            <CursorContext.Provider value={{ cursorEnter, setCursorEnter }}>
-                <Cursor position={position} enter={enter} />
-                <HeroBanner />
-                <ServicesMain />
-                {/* <Multiple /> */}
-                {/* <PrivacyPolicy /> */}
-                {/* <Services /> */}
-                {/* <Sample/> */}
-                <Menu />
-            </CursorContext.Provider>
+        <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => dispatch(cursorEnter())} onMouseLeave={() => dispatch(cursorEnter())} style={{ cursor: "none", overflow: "hidden" }}>
+            <Cursor />
+            <HeroBanner />
+            <ServicesMain />
+            <Multiple />
+            <Services />
+            <About />
+            <Sample />
+            <Menu />
         </main>
     )
 }
