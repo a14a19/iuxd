@@ -30,11 +30,20 @@ function PrivacyPolicy() {
       <div className="forTable mx-4">
         {ppData.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="flex mb-4 md:flex-row flex-col">
-              <div className="numColumn w-1/5">{item.num}</div>
-              <div className="titleColumn w-3/10">{item.title}</div>
-              <div className="descColumn w-1/2">{item.description}</div>
-            </div>
+            {
+              item.num === "11" || item.num === "06" || item.num === "07" ?
+                <div className="flex mb-4 md:flex-row flex-col">
+                  <div className="numColumn w-1/5">{item.num}</div>
+                  <div className="titleColumn w-3/10 md:my-0 my-2">{item.title}</div>
+                  <div className="descColumn md:w-1/2 w-full">{item.description} <Link to="mailto:hello@iuxd.agency" className="underline underline-offset-2">hello@iuxd.agency</Link>.</div>
+                </div>
+                :
+                <div className="flex mb-4 md:flex-row flex-col">
+                  <div className="numColumn w-1/5">{item.num}</div>
+                  <div className="titleColumn w-3/10 md:my-0 my-2">{item.title}</div>
+                  <div className="descColumn md:w-1/2 w-full">{item.description}</div>
+                </div>
+            }
             {index < ppData.length - 1 && <hr className="tableSeparator" />}
           </React.Fragment>
         ))}

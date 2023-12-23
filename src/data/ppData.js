@@ -33,13 +33,13 @@ const ppData = [
     num: "06",
     title: "We may delete your stored personal data at any time",
     description:
-      "To safeguard your privacy, we reserve the right to delete stored personal data at any time. For further details, please contact us via email at hello@iuxd.agency.",
+      "To safeguard your privacy, we reserve the right to delete stored personal data at any time. For further details, please contact us via email at ",
   },
   {
     num: "07",
     title: "Our commitment to the security of your personal data",
     description:
-      "For security concerns, please contact us via email at hello@iuxd.agency.",
+      "For security concerns, please contact us via email at ",
   },
   {
     num: "08",
@@ -62,7 +62,7 @@ const ppData = [
   {
     num: "11",
     title: "Do you have any questions?",
-    description: "Feel free to contact us via email at hello@iuxd.agency.",
+    description: "Feel free to contact us via email at ",
   },
 ];
 

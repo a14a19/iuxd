@@ -22,7 +22,7 @@
 }
 
 .top3 h2 {
-  margin-left: 20px; /* Adjust for mobile */
+  /* margin-left: 20px; Adjust for mobile */
   color: white;
 }
 
@@ -34,13 +34,13 @@
 .top4 h1 {
   font-size: 35px; /* Adjust for mobile */
   font-weight: 500;
-  margin-left: 20px; /* Adjust for mobile */
+  /* margin-left: 20px; Adjust for mobile */
   color: white;
 }
 
 .top4 p {
   font-size: 18px; /* Adjust for mobile */
-  margin-left: 20px; /* Adjust for mobile */
+  /* margin-left: 20px; Adjust for mobile */
   font-weight: 500;
   color: rgb(178, 178, 178);
 }
