@@ -1,13 +1,14 @@
 import React from "react";
 import "./privacyPolicy.css";
 import ppData from "../../data/ppData";
+import { Link } from "react-router-dom";
 
 function PrivacyPolicy() {
   return (
     <div className="mainbox">
       <div className="forContent bg-white text-black  font-archivo mx-4">
         <p className="para">
-          At iUXD, we value your privacy and are committed to protecting your
+          At <Link to="/" className="underline">iUXD</Link>, we value your privacy and are committed to protecting your
           data. This Privacy Statement outlines how we, the UI/UX design experts
           at iUXD, collect and utilize your information to enhance your
           experience and deliver exceptional design services. This policy

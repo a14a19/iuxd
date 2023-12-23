@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Contact.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { displayOff } from "../../../features/slider/sliderSlice";
@@ -120,8 +120,8 @@ const Contact = () => {
 
       {/* Message */}
       <div className="form">
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" className="input bg-white"></textarea>
+        <label htmlFor="message" style={{margin:"5px 0 0 10px"}}>Message</label>
+        <textarea id="message" name="message" className="input bg-white overflow-hidden"></textarea>
         <p className="text-xs mt-8">
           We will never share your information. By submitting, you agree to our{' '}
           <Link to="/privacy-policy" className="underline-offset-4">Privacy Policy.</Link>
@@ -132,10 +132,11 @@ const Contact = () => {
       {/* <button type="submit" className="submit-button">
         See Open Position
       </button> */}
+
       <button className='border border-black text-black text-md sm:text-xl mb-24 mt-20 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
         Submit
       </button>
-    </div>
+    </div >
   );
 };
 

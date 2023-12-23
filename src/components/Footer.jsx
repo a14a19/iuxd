@@ -13,6 +13,7 @@ function Footer() {
                     <Link target="_blank" title='LinkedIn' to="https://www.linkedin.com/company/iuxd/" className='cursor-none'><div className="linkedin underline underline-offset-1" >LinkedIn</div></Link>
                     <Link target="_blank" title='Twitter' to="https://twitter.com/iuxd_design" className='cursor-none'><div className="dribbble underline underline-offset-1">Twitter</div></Link>
                     <Link target="_blank" title='Facebook' to="https://www.facebook.com/iuxdesign/" className='cursor-none'><div className="dribbble underline underline-offset-1 cursor-none">Facebook</div></Link>
+                    <Link target="_blank" title='Crunchbase' to="https://www.crunchbase.com/organization/iuxd" className='cursor-none'><div className="dribbble underline underline-offset-1 cursor-none">Crunchbase</div></Link>
                 </div>
             </div>
         </div>

@@ -17,9 +17,9 @@ function ServicesMain() {
           <h2>Services</h2>
         </div>
         <div className='top4'>
-          <h1>Your product operation <br /> can be much more <br />efficient</h1>
-          <p className='mt-2'>We help you get your Design System off the<br /> ground and implement it very quickly, in<br /> addition to building leaner design and<br /> technology chapters, capable of delivering<br /> more with fewer people.</p>
-          <button className="border border-[#ffffff50] md:max-w-[130px] max-w-[115px] mt-20 w-[150px] md:h-[64px] h-[56px] rounded-full md:text-base text-sm cursor-none z-30 absolute" onClick={() => dispatch(nameOfSliderComponent({ name: "services" }))} onPointerEnter={() => dispatch(iconShow({ type: "" }))} onPointerLeave={() => dispatch(iconHide({ type: "" }))}>Services</button>
+          <h1>Expert Insights for Design & Development</h1>
+          <p className='mt-2'>Designing the future with iUXD: where product design, UI/UX, and development come together to create unforgettable experiences.</p>
+          <button className="border border-[#ffffff50] md:max-w-[130px] max-w-[115px] mt-20 w-[150px] md:h-[64px] h-[56px] rounded-full md:text-base text-sm cursor-none z-10 absolute" onClick={() => dispatch(nameOfSliderComponent({ name: "services" }))} onPointerEnter={() => dispatch(iconShow({ type: "" }))} onPointerLeave={() => dispatch(iconHide({ type: "" }))}>Services</button>
           {/* <button className='btn'>Services</button> */}
         </div>
       </div>

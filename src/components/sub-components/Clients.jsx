@@ -1,15 +1,30 @@
-import Fellow from "../../assets/Services/Fellow.jpg";
-import Worko from "../../assets/Services/Worko.jpg";
-import Three from "../../assets/Services/three.jpg";
+import Fellow from "../../assets/Services/loom.svg";
+import Worko from "../../assets/Services/google.svg";
+import Three from "../../assets/Services/miro.svg";
+import figma from "../../assets/Services/figma.svg";
+import github from "../../assets/Services/github.svg";
+import react from "../../assets/Services/react.svg";
+import redux from "../../assets/Services/redux.svg";
+import slack from "../../assets/Services/slack.svg";
+import tailwind from "../../assets/Services/tailwindcss.svg";
+import trello from "../../assets/Services/trello.svg";
+import vscode from "../../assets/Services/vscode.svg";
 import WorkoProject from "../../assets/Services/WorkoProject.png";
 import { useDispatch, useSelector } from 'react-redux';
-import { displayOff } from "../../features/slider/sliderSlice";
+import { displayOff, nameOfSliderComponent } from "../../features/slider/sliderSlice";
 import { iconHide, iconShow } from "../../features/cursor/cursorSlice";
 
 const Client = () => {
 
     const { iconDisplayCircle } = useSelector((store) => store.cursor)
     const dispatch = useDispatch()
+
+    const openContact = () => {
+        dispatch(displayOff())
+        setTimeout(() => {
+            dispatch(nameOfSliderComponent({ name: "contact" }))
+        }, 555)
+    }
 
     return (
         <div className="main-div bg-[#fff] w-full flex flex-col gap-12 md:gap-16">
@@ -37,7 +52,7 @@ const Client = () => {
                     }
                 </button>
             </div>
-            <div className="w-full px-6 flex flex-col gap-16 justify-start items-start md:px-20">
+            {/* <div className="w-full px-6 flex flex-col gap-16 justify-start items-start md:px-20">
                 <div className="w-full h-full flex justify-start items-center">
                     <img className="w-full md:w-[90%] lg:w-[90%] rounded-lg" src={WorkoProject} />
                 </div>
@@ -47,26 +62,56 @@ const Client = () => {
                     </div>
                     <div className="text-gray-500 text-xs md:text-base w-[60%] md:w-[50%] text-left">Elevating Worko's digital landscape, our team seamlessly fused ReactJS and Figma to craft a dynamic web experience. ReactJS ensures a responsive and captivating user journey, while Figma's canvas shapes a visually stunning interface, catapulting Worko into the digital forefront with a cutting-edge web presence.</div>
                 </div>
-            </div>
-            <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto m-20"></div>
-            <div className="flex justify-between items-center w-[92%] px-6 md:px-20">
-                <div className="aspect-square w-16 md:w-22 lg:w-28">
+            </div> */}
+            {/* <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto m-20"></div> */}
+            <div className="grid md:grid-cols-3 grid-cols-2 w-full px-6 md:px-20 lg:gap-x-[22rem] md:gap-x-[13rem] gap-x-[5rem] md:gap-y-40 gap-y-20">
+                <div className="w-16">
                     <img className="rounded-lg grayscale contrast-200" src={Worko} />
                 </div>
-                <div className="aspect-square w-16 md:w-22 lg:w-28">
+                <div className="w-16">
                     <img className="rounded-lg grayscale contrast-200" src={Three} />
                 </div>
-                <div className="aspect-square w-16 md:w-22 lg:w-28">
+                <div className="w-16">
                     <img className="rounded-lg contrast-200" src={Fellow} />
                 </div>
             </div>
-            <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto m-20"></div>
-            <div className="flex justify-between items-center px-6 md:px-20 gap-4">
-                <div className="text-gray-500 text-base md:text-4xl font-thin">Partner with Us</div>
-                <div className="text-gray-500 text-xs w-[60%] md:text-base ">We can help in many ways, including helping you see what you really need.</div>
+            <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto md:m-10 m-8"></div>
+            <div className="inner-first flex justify-between items-center px-4 py-4 md:px-20 py-4">
+                <h1 className="text-gray-900 text-xl">What we use</h1>
             </div>
-            <div className="flex justify-end pe-4 md:pe-12">
-                <button className='border border-gray-400 text-gray-700 w-min whitespace-nowrap text-md sm:text-xl mb-24 mt-24 px-12 md:h-[58px] h-[50px] rounded-full'>
+            <div className="grid md:grid-cols-3 grid-cols-2 w-full px-6 md:px-20 lg:gap-x-[22rem] md:gap-x-[13rem] gap-x-[5rem] md:gap-y-40 gap-y-20">
+                <div className="w-16">
+                    <img className="rounded-lg grayscale contrast-200" src={figma} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg grayscale contrast-200" src={trello} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg contrast-200" src={react} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg grayscale contrast-200" src={github} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg grayscale contrast-200" src={slack} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg contrast-200" src={vscode} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg grayscale contrast-200" src={tailwind} />
+                </div>
+                <div className="w-16">
+                    <img className="rounded-lg contrast-200" src={redux} />
+                </div>
+            </div>
+            <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto md:m-10 m-8"></div>
+            <div className="flex justify-between md:items-center items-start px-6 md:px-20 gap-4 md:flex-row flex-col">
+                <div className="text-black text-base md:text-4xl font-thin">Partner with Us</div>
+                <div className="text-gray-500 text-sm md:w-[50%] w-full md:text-base ">We can help in many ways, including helping you see what you really need.</div>
+            </div>
+            <div className="flex ps-6 md:ps-20">
+                <button className='border border-gray-400 text-gray-700 w-min whitespace-nowrap text-md sm:text-xl mb-20 mt-10 px-12 md:h-[58px] h-[50px] rounded-full' onClick={() => openContact()}>
                     Let's Talk
                 </button>
             </div>

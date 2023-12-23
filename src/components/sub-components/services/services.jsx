@@ -1,5 +1,5 @@
 import { iconHide, iconShow } from "../../../features/cursor/cursorSlice";
-import { displayOff } from "../../../features/slider/sliderSlice";
+import { displayOff, nameOfSliderComponent } from "../../../features/slider/sliderSlice";
 import "./services.css"
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -8,9 +8,16 @@ function Services() {
     const { iconDisplayCircle } = useSelector((store) => store.cursor)
     const dispatch = useDispatch()
 
+    const openContact = () => {
+        dispatch(displayOff())
+        setTimeout(() => {
+            dispatch(nameOfSliderComponent({ name: "contact" }))
+        }, 555)
+    }
+
     return (
         <div className="service-container">
-            <div className="header mt-6 p-0 my-16">
+            <div className="header mt-6 p-0 my-16 flex items-center">
                 <div className="">Services</div>
                 <div onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
                     {iconDisplayCircle ?
@@ -40,7 +47,7 @@ function Services() {
             </div>
 
             <section className="services-section">
-                <div className="service-row my-8">
+                {/* <div className="service-row my-8">
                     <div className="heading-content">
                         <h1 className="text-lg font-semibold mt-[2rem]">Discover everything we do.</h1>
                     </div>
@@ -49,22 +56,22 @@ function Services() {
                         <p>Although we are well known for our work with Design Systems, we also help large companies to accelerate or streamline their product operations with different operating models, mixing design, technology and, more recently, artificial intelligence.</p>
                     </div>
 
-                </div>
-                <hr></hr>
+                </div> */}
+                {/* <hr></hr> */}
                 <div className="service-content">
-                    <div className="service-row my-8">
+                    <div className="service-row my-8 md:flex-row flex-col" >
 
                         <div className="heading-content">
-                            <h1 className="text-lg font-semibold">Design System</h1>
+                            <h1 className="text-base md:text-4xl font-thin">Design System</h1>
                             <p>We were pioneers and are a reference when it comes to Design Systems. We recently launched Design System as a Service, a mix of software, service and artificial intelligence to do this faster, with higher quality and, as if that weren't enough, cheaper.</p>
                         </div>
                         <div className="heading-content">
-                            <h1 className="text-lg font-semibold">DS Team</h1>
-                            <p>We can also be your squad of super experts to accelerate implementation and enhance the impact of the Design System in your organization. In this format, we work with designers, devs and product people trained and managed by us.</p>
+                            <h1 className="text-base md:text-4xl font-thin">Development</h1>
+                            <p>Our developer system at iUXD fosters collaboration, innovation, and professional growth. With cutting-edge tools, code reviews, and cross-functional teamwork, we empower our developers to bring their ideas to life and deliver exceptional products.</p>
                         </div>
                     </div>
 
-                    <div className="service-row my-8">
+                    {/* <div className="service-row my-8">
                         <div className="heading-content">
                             <h1 className="text-lg font-semibold">Chapter as a Service</h1>
                             <p>We work on the outsourcing model to build your design and front end chapters (web and mobile). The cool thing is that because we know how to work from a Design System, we need much fewer people to deliver the same as other consultancies, generally less than half.</p>
@@ -74,27 +81,23 @@ function Services() {
                             <p>These are two complimentary services that we offer to enhance our clients’ results. The first is about rethinking the way the entire product team organizes itself in search of more efficient formats. The second is about monitoring tools and hypotheses for applying AI in the product workflow, from design to development.</p>
                         </div>
 
-                    </div>
+                    </div> */}
 
 
 
                 </div>
-                <hr></hr>
 
             </section>
-            <div className="service-row my-8">
-                <div className="heading-content">
-
-                    <p className="text-lg font-semibold">Partner with us!</p>
-                </div>
-                <div className="heading-content">
-
-                    <p>We can help in many ways, including helping you see what you really need.</p>
-                </div>
+            <div className="divider h-0.5 w-full bg-gray-300 mx-auto md:my-16 my-10"></div>
+            <div className="flex justify-between gap-4 md:items-center items-start md:flex-row flex-col">
+                <div className="text-black text-base md:text-4xl font-thin">Partner with Us</div>
+                <div className="text-gray-500 text-sm md:w-[49%] w-full md:text-base ">We can help in many ways, including helping you see what you really need.</div>
             </div>
-            <button className='border border-black text-black text-md sm:text-xl mb-24 mt-24 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
-                Let's talk
-            </button>
+            <div className="flex mt-10">
+                <button className='border border-gray-400 text-gray-700 w-min whitespace-nowrap text-md sm:text-xl mb-20 mt-10 px-12 md:h-[58px] h-[50px] rounded-full' onClick={() => openContact()}>
+                    Let's Talk
+                </button>
+            </div>
 
 
         </div>

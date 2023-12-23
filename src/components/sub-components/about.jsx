@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { iconHide, iconShow } from '../../features/cursor/cursorSlice';
 import { displayOff } from '../../features/slider/sliderSlice';
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -9,7 +10,7 @@ const About = () => {
 
     return (
         <div className='w-full px-6'>
-            <div className="header mt-6 p-8">
+            <div className="header mt-6 p-8 flex items-center">
                 <div className="text-black">About</div>
                 <div onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
                     {iconDisplayCircle ?
@@ -37,36 +38,29 @@ const About = () => {
                     }
                 </div>
             </div>
-            <div className='p-8 sm:p-0 mt-10'>
-                <div className=" container flex flex-col sm:flex-row">
-                    <div className="container font-extrabold text-2xl scale text-black">
-                        Scale Design <br />made in Brazil.
+            <div className='p-8 mt-10'>
+                <div className=" container flex flex-col sm:flex-row justify-between">
+                    <div className="font-bold text-2xl scale text-black md:w-[30%] w-full">
+                        About iUXD Design & Development Agency
                     </div>
-                    <div className='container text-1 text-black'>
-                        We are a proudly Brazilian digital product studio. We were born from the desire to mix
-                        design with social impact and ended up discovering a vocation for the Design System. We
-                        became experts on the subject,shaped the market and helped big companies from different
-                        segments with this challenge.<br /><br />
-                        Naturally, we started helping our customers to take the next
-                        step: designing and developing amazing products from the Design System that we created.<br /><br />
-                        We believe that design is about making a difference, but now we are adding technology and artificial intelligence in equal
-                        measure to help our clients prepare for this revolution we are experiencing.
+                    <div className='text-black md:w-[50%] w-full'>
+                        At iUXD Company, we are dedicated to shaping exceptional digital experiences through innovative and user-centric design. Our mission is to bridge the gap between technology and user needs, delivering interfaces that are not only visually stunning but also intuitive and engaging. With a focus on collaboration, we work closely with our clients to understand their goals and transform concepts into seamless, effective user interactions.
                     </div>
                 </div>
-                <div className='border-b border-gray-500 py-4 mt-8 sm:mt-0'></div>
-                <div className='container flex flex-col sm:flex-row mt-16'>
-                    <div className='container text-black font-extrabold text-2 text-2xl scale'>
+                <div className='border-b border-gray-500 py-4 my-8'></div>
+                <div className='container flex flex-col sm:flex-row mt-16 justify-between'>
+                    <div className='text-black font-bold text-2 text-2xl scale md:w-[40%] w-full'>
                         Join our team!
                     </div>
-                    <div className='container mr-20 text-1 text-2 mt-8 sm:mt-0 text-black'>
-                        We believe that happiness at work comes from a balance between purpose, technical challenge, mental health and,
-                        of course, a good pay. If you are looking for a challenging environment with lots of incredible people,
-                        keep an eye on our vacancies. Meiuca could be your place.
+                    <div className='mt-8 sm:mt-0 text-black md:w-[50%] w-full'>
+                        At iUXD, we are a passionate team specializing in product design, UI/UX design, and development. If you are a talented individual who wants to work with a brilliant team, contribute to innovative projects, and grow your skills, we would love to hear from you. To apply, please submit your resume, portfolio, and a brief description of why you would be a great fit for iUXD to <Link to="mailto:hello@iuxd.agency" className='underline underline-offset-2'>hello@iuxd.agency</Link>.
                     </div>
                 </div>
-                <button className='border border-black text-black text-md sm:text-xl mb-24 mt-24 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
-                    See Open Position
-                </button>
+                <Link to="https://www.linkedin.com/company/iuxd/jobs/" target='_blank'>
+                    <button className='border border-black text-black text-md sm:text-xl my-24 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
+                        See Open Position
+                    </button>
+                </Link>
             </div>
         </div>
     )
