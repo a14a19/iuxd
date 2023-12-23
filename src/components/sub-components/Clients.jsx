@@ -1,6 +1,3 @@
-import Fellow from "../../assets/Services/loom.svg";
-import Worko from "../../assets/Services/google.svg";
-import Three from "../../assets/Services/miro.svg";
 import figma from "../../assets/Services/figma.svg";
 import github from "../../assets/Services/github.svg";
 import react from "../../assets/Services/react.svg";
@@ -9,10 +6,10 @@ import slack from "../../assets/Services/slack.svg";
 import tailwind from "../../assets/Services/tailwindcss.svg";
 import trello from "../../assets/Services/trello.svg";
 import vscode from "../../assets/Services/vscode.svg";
-import WorkoProject from "../../assets/Services/WorkoProject.png";
 import { useDispatch, useSelector } from 'react-redux';
 import { displayOff, nameOfSliderComponent } from "../../features/slider/sliderSlice";
 import { iconHide, iconShow } from "../../features/cursor/cursorSlice";
+import { clientData, toolsData } from "../../data/clientsData.js";
 
 const Client = () => {
 
@@ -32,7 +29,7 @@ const Client = () => {
                 <h1 className="text-gray-900 text-xl">Clients</h1>
                 <button onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
                     {iconDisplayCircle ?
-                        <div className=' h-12 w-12 bg-blue-600 rounded-full flex justify-center items-center md:h-16 md:w-16'>
+                        <div className=' h-10 w-10 bg-blue-600 rounded-full flex justify-center items-center md:h-16 md:w-16'>
                             <div className="w-4 h-4 text-white md:w-8 md:h-8 flex justify-center items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="18" y1="6" x2="6" y2="18" />
@@ -41,7 +38,7 @@ const Client = () => {
                             </div>
                         </div>
                         :
-                        <div className=' h-12 w-12 bg-black rounded-full flex justify-center items-center md:h-16 md:w-16'>
+                        <div className=' h-10 w-10 bg-black rounded-full flex justify-center items-center md:h-16 md:w-16'>
                             <div className="w-4 h-4 text-white md:w-8 md:h-8 flex justify-center items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="18" y1="6" x2="6" y2="18" />
@@ -64,46 +61,40 @@ const Client = () => {
                 </div>
             </div> */}
             {/* <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto m-20"></div> */}
-            <div className="grid md:grid-cols-3 grid-cols-2 w-full px-6 md:px-20 lg:gap-x-[22rem] md:gap-x-[13rem] gap-x-[5rem] md:gap-y-40 gap-y-20">
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={Worko} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={Three} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg contrast-200" src={Fellow} />
-                </div>
+            <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 w-full md:px-16 px-0 md:px-20 lg:gap-x-[2rem] gap-x-[4rem] md:gap-y-40 gap-y-20">
+                {
+                    clientData && clientData.map((client, index) => {
+                        return (
+                            <>
+                                {
+                                    client.name === "pleasure" ?
+                                        <div className="md:w-16 w-12" key={index}>
+                                            <img className="rounded-lg" style={{ filter: "grayscale(1) invert(1) brightness(10)" }} src={client.img} />
+                                        </div>
+                                        :
+                                        <div className="md:w-16 w-12" key={index}>
+                                            <img className="rounded-lg grayscale contrast-200" src={client.img} />
+                                        </div>
+                                }
+                            </>
+                        )
+                    })
+                }
             </div>
             <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto md:m-10 m-8"></div>
             <div className="inner-first flex justify-between items-center px-4 py-4 md:px-20 py-4">
                 <h1 className="text-gray-900 text-xl">What we use</h1>
             </div>
-            <div className="grid md:grid-cols-3 grid-cols-2 w-full px-6 md:px-20 lg:gap-x-[22rem] md:gap-x-[13rem] gap-x-[5rem] md:gap-y-40 gap-y-20">
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={figma} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={trello} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg contrast-200" src={react} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={github} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={slack} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg contrast-200" src={vscode} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg grayscale contrast-200" src={tailwind} />
-                </div>
-                <div className="w-16">
-                    <img className="rounded-lg contrast-200" src={redux} />
-                </div>
+            <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 w-full md:px-16 px-0 md:px-20 lg:gap-x-[2rem] gap-x-[4rem] md:gap-y-40 gap-y-20">
+                {
+                    toolsData && toolsData.map((tool, index) => {
+                        return (
+                            <div className="md:w-16 w-12" key={index}>
+                                <img className="rounded-lg grayscale contrast-200" src={tool.img} />
+                            </div>
+                        )
+                    })
+                }
             </div>
             <div className="divider h-0.5 w-[90%] bg-gray-300 mx-auto md:m-10 m-8"></div>
             <div className="flex justify-between md:items-center items-start px-6 md:px-20 gap-4 md:flex-row flex-col">

@@ -8,7 +8,7 @@ function HeroBanner() {
     const dispatch = useDispatch()
 
     return (
-        <main className="w-full md:px-24 md:pt-20 px-4 pt-8 pb-28 flex flex-col md:gap-36 gap-24">
+        <main className="w-full md:px-24 md:pt-20 px-4 pt-8 md:pb-28 pb-0 flex flex-col md:gap-36 gap-24">
             <Header />
             <div className="flex flex-col md:gap-24 gap-16">
                 <div>

@@ -16,14 +16,14 @@ function Services() {
     }
 
     return (
-        <div className="service-container">
-            <div className="header mt-6 p-0 my-16 flex items-center">
+        <div className="service-container md:p-[2rem] p-2">
+            <div className="header mt-6 p-0 md:my-16 my-6 flex items-center">
                 <div className="">Services</div>
                 <div onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
                     {iconDisplayCircle ?
                         <div className='relative'>
-                            <div className=' h-16 w-16 bg-blue-600 rounded-full flex justify-center items-center'>
-                                <div className="w-8 h-8 text-white">
+                            <div className=' md:h-16 md:w-16 w-10 h-10 bg-blue-600 rounded-full flex justify-center items-center'>
+                                <div className="md:w-8 md:h-8 w-4 h-4 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18" />
                                         <line x1="6" y1="6" x2="18" y2="18" />
@@ -33,8 +33,8 @@ function Services() {
                         </div>
                         :
                         <div className='relative'>
-                            <div className=' h-16 w-16 bg-black rounded-full flex justify-center items-center'>
-                                <div className="w-8 h-8 text-white">
+                            <div className=' md:h-16 md:w-16 w-10 h-10 bg-black rounded-full flex justify-center items-center'>
+                                <div className="md:w-8 md:h-8 w-4 h-4 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18" />
                                         <line x1="6" y1="6" x2="18" y2="18" />
@@ -62,12 +62,12 @@ function Services() {
                     <div className="service-row my-8 md:flex-row flex-col" >
 
                         <div className="heading-content">
-                            <h1 className="text-base md:text-4xl font-thin">Design System</h1>
-                            <p>We were pioneers and are a reference when it comes to Design Systems. We recently launched Design System as a Service, a mix of software, service and artificial intelligence to do this faster, with higher quality and, as if that weren't enough, cheaper.</p>
+                            <h1 className="text-lg md:text-4xl md:font-thin font-medium">Design</h1>
+                            <p className="md:mt-6 mt-3">At iUXD, our talented team demonstrates a deep understanding of user needs and goals, prioritizing usability and impactful interactions to create exceptional digital experiences.</p>
                         </div>
                         <div className="heading-content">
-                            <h1 className="text-base md:text-4xl font-thin">Development</h1>
-                            <p>Our developer system at iUXD fosters collaboration, innovation, and professional growth. With cutting-edge tools, code reviews, and cross-functional teamwork, we empower our developers to bring their ideas to life and deliver exceptional products.</p>
+                            <h1 className="text-lg md:text-4xl md:font-thin font-medium">Development</h1>
+                            <p className="md:mt-6 mt-3">Our developer at iUXD fosters collaboration, innovation, and professional growth. With cutting-edge tools, code reviews, and cross-functional teamwork, we empower our developers to bring their ideas to life and deliver exceptional products.</p>
                         </div>
                     </div>
 
@@ -90,7 +90,7 @@ function Services() {
             </section>
             <div className="divider h-0.5 w-full bg-gray-300 mx-auto md:my-16 my-10"></div>
             <div className="flex justify-between gap-4 md:items-center items-start md:flex-row flex-col">
-                <div className="text-black text-base md:text-4xl font-thin">Partner with Us</div>
+                <div className="text-black text-lg md:text-4xl md:font-thin font-medium">Partner with Us</div>
                 <div className="text-gray-500 text-sm md:w-[49%] w-full md:text-base ">We can help in many ways, including helping you see what you really need.</div>
             </div>
             <div className="flex mt-10">

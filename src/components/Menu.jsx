@@ -9,7 +9,7 @@ export default function Menu() {
 
     return (
         <>
-            <div className="main md:px-24 md:pt-[10rem] px-4 md:pt-12 pt-8 pb-28">
+            <div className="main md:px-24 md:pt-[10rem] px-4 pt-24 pb-28">
                 <div className="menu flex flex-col gap-8 mb-10">
                     <div className="menu-heading flex flex-col">
                         Menu

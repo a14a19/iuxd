@@ -8,7 +8,7 @@ function Footer() {
                     <div className='cursor-none'>All rights reversed 2023</div>
                     <Link to="/privacy-policy" className='cursor-none'><div className="underline underline-offset-1  ">Privacy Policy</div></Link>
                 </div>
-                <div className="right-side flex flex-row gap-4 cursor-none">
+                <div className="right-side flex flex-row gap-4 cursor-none flex-wrap">
                     <Link target="_blank" title='Instagram' to="https://www.instagram.com/iuxdstudio/" className='cursor-none'><div className="insta underline underline-offset-1 cursor-none">Instagram</div></Link>
                     <Link target="_blank" title='LinkedIn' to="https://www.linkedin.com/company/iuxd/" className='cursor-none'><div className="linkedin underline underline-offset-1" >LinkedIn</div></Link>
                     <Link target="_blank" title='Twitter' to="https://twitter.com/iuxd_design" className='cursor-none'><div className="dribbble underline underline-offset-1">Twitter</div></Link>

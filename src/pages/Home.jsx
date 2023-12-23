@@ -25,7 +25,8 @@ function Home() {
     }
 
     return (
-        <main className="relative" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => dispatch(cursorEnter())} onMouseLeave={() => dispatch(cursorLeave())} style={{ cursor: "none", overflow: "hidden" }}>
+        // style={{ cursor: "none", overflow: "hidden" }}
+        <main className="relative md:cursor-none cursor-auto overflow-hidden" onMouseMove={(e) => mouseOver(e)} onMouseEnter={() => dispatch(cursorEnter())} onMouseLeave={() => dispatch(cursorLeave())} >
             <Cursor />
             <SliderComp />
             <HeroBanner />

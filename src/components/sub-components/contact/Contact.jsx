@@ -30,13 +30,13 @@ const Contact = () => {
 
   return (
     <div className="login-container gap-9">
-      <div className="w-full header mt-6 p-8 flex items-center justify-between">
+      <div className="w-full header mt-6 md:p-8 p-2 flex items-center justify-between">
         <div className="">Lets Talk</div>
         <div onClick={() => dispatch(displayOff())} onPointerEnter={() => dispatch(iconShow({ type: "circle" }))} onPointerLeave={() => dispatch(iconHide({ type: "circle" }))}>
           {iconDisplayCircle ?
             <div className='relative'>
-              <div className=' h-16 w-16 bg-blue-600 rounded-full flex justify-center items-center'>
-                <div className="w-8 h-8 text-white">
+              <div className=' md:h-16 md:w-16 w-10 h-10 bg-blue-600 rounded-full flex justify-center items-center'>
+                <div className="md:w-8 md:h-8 w-4 h-4 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
@@ -46,8 +46,8 @@ const Contact = () => {
             </div>
             :
             <div className='relative'>
-              <div className=' h-16 w-16 bg-black rounded-full flex justify-center items-center'>
-                <div className="w-8 h-8 text-white">
+              <div className=' md:h-16 md:w-16 w-10 h-10 bg-black rounded-full flex justify-center items-center'>
+                <div className="md:w-8 md:h-8 h-4 w-4 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
@@ -59,7 +59,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Name */}
-      <div className="form">
+      <div className="form md:w-[80%] w-full">
         <input
           type="text"
           name="name"
@@ -73,7 +73,7 @@ const Contact = () => {
       </div>
 
       {/* Email */}
-      <div className="form">
+      <div className="form md:w-[80%] w-full">
         <input
           type="email"
           name="email"
@@ -87,7 +87,7 @@ const Contact = () => {
       </div>
 
       {/* Phone Number */}
-      <div className="form">
+      <div className="form md:w-[80%] w-full">
         <input
           type="number"
           name="phone"
@@ -101,7 +101,7 @@ const Contact = () => {
       </div>
 
       {/* Dropdown */}
-      <div className="dropdown">
+      <div className="dropdown md:w-[80%] w-full">
         <div className="dropdown-toggle" onClick={toggleDropdown}>
           {selectedOption || "How can we help you"}
         </div>
@@ -119,7 +119,7 @@ const Contact = () => {
       </div>
 
       {/* Message */}
-      <div className="form">
+      <div className="form md:w-[80%] w-full">
         <label htmlFor="message" style={{margin:"5px 0 0 10px"}}>Message</label>
         <textarea id="message" name="message" className="input bg-white overflow-hidden"></textarea>
         <p className="text-xs mt-8">
@@ -133,7 +133,7 @@ const Contact = () => {
         See Open Position
       </button> */}
 
-      <button className='border border-black text-black text-md sm:text-xl mb-24 mt-20 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
+      <button className='border border-black text-black text-md sm:text-xl md:mb-24 md:mt-20 mb-14 mt-10 md:px-12 sm:px-8 px-6 md:h-[64px] h-[56px] rounded-full'>
         Submit
       </button>
     </div >
