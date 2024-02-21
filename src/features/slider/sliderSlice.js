@@ -11,11 +11,12 @@ const sliderSlice = createSlice({
     reducers: {
         displayOff: (state) => {
             state.sliderShow = false
+            state.sliderName = ""
         },
         nameOfSliderComponent: (state, { payload }) => {
             state.sliderShow = !state.sliderShow
             state.sliderName = payload.name
-            console.log(payload.name, state.sliderShow, state.sliderName, "component name")
+            // console.log(payload.name, state.sliderShow, state.sliderName, "component name")
         }
     }
 })

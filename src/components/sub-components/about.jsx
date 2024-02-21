@@ -53,7 +53,7 @@ const About = () => {
                         Join our team!
                     </div>
                     <div className='mt-2 md:mt-0 text-black md:w-[50%] w-full'>
-                        We welcome passionate and motivated individuals who are eager to learn and grow, please submit your resume, portfolio, and a brief description of why you'd be a great fit for us at <Link to="mailto:hello@iuxd.agency" className='underline underline-offset-2'>hello@iuxd.agency</Link>.
+                        We welcome passionate and motivated individuals who are eager to learn and grow, please submit your resume, portfolio, and a brief description of why you'd be a great fit for us at <Link to="mailto:hi@iuxd.agency" className='underline underline-offset-2'>hi@iuxd.agency</Link>.
                     </div>
                 </div>
                 <Link to="https://www.linkedin.com/company/iuxd/jobs/" target='_blank'>

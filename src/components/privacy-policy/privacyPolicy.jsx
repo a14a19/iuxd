@@ -35,7 +35,7 @@ function PrivacyPolicy() {
                 <div className="flex mb-4 md:flex-row flex-col">
                   <div className="numColumn w-1/5">{item.num}</div>
                   <div className="titleColumn w-3/10 md:my-0 my-2">{item.title}</div>
-                  <div className="descColumn md:w-1/2 w-full">{item.description} <Link to="mailto:hello@iuxd.agency" className="underline underline-offset-2">hello@iuxd.agency</Link>.</div>
+                  <div className="descColumn md:w-1/2 w-full">{item.description} <Link to="mailto:hi@iuxd.agency" className="underline underline-offset-2">hi@iuxd.agency</Link>.</div>
                 </div>
                 :
                 <div className="flex mb-4 md:flex-row flex-col">
